@@ -26,6 +26,5 @@ export async function getStaticProps (ctx: GetStaticPropsContext) {
   const response = await fetch(`https://valorant-api.com/v1/agents?${localeSuffix}`)
   const { data } = await response.json()
 
-  console.log({ data })
   return { props: { agents: data } }
 }
