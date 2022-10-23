@@ -19,6 +19,7 @@
     "target": "es2018",
     "incremental": true,
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "paths": {
       "@App/*": [
         "src/*"
@@ -37,8 +38,10 @@
       ],
       "@services/*": [
         "src/services/*"
-      ],
-    }
+      ]
+    },
+    "skipLibCheck": true,
+    "noEmit": true
   },
   "include": [
     "next-env.d.ts",
@@ -46,6 +49,7 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules", ".next"
+    "node_modules",
+    ".next"
   ]
 }

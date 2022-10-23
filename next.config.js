@@ -1,10 +1,10 @@
 module.exports = {
   reactStrictMode: true,
+  i18n: {
+    locales: ['en-US', 'pt-BR'],
+    defaultLocale: 'en-US'
+  },
   typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
     ignoreBuildErrors: true
   }
 }
