@@ -6,5 +6,8 @@ module.exports = {
   },
   typescript: {
     ignoreBuildErrors: true
+  },
+  images: {
+    domains: ['media.valorant-api.com']
   }
 }

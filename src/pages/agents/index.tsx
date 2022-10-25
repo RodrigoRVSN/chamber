@@ -1,4 +1,5 @@
 import { GetStaticPropsContext } from 'next'
+import Link from 'next/link'
 import { FormattedMessage } from 'react-intl'
 import { Agent } from '@App/core/types/IAgent'
 
@@ -10,10 +11,12 @@ export default function Agents ({ agents }: IAgents): JSX.Element {
   return (
     <>
       {agents.map(agent => (
-        <div key={agent.uuid}>
+        <Link key={agent.uuid} passHref href={`/agents/${agent.uuid}`}>
+          <a href=''>
           <p>{agent.displayName}</p>
           <p>{agent.description}</p>
-        </div>
+          </a>
+        </Link>
       ))}
       <FormattedMessage id='cta' />
     </>
