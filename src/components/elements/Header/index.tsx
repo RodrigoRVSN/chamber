@@ -7,14 +7,16 @@ export const Header = () => {
   return (
     <header className={styles.header__container}>
       <nav className={styles.header__nav}>
-        <Image src="/logo.png" height={50} width={100} />
+        <Link href="/" passHref>
+          <Image src="/logo.png" height={40} width={60} />
+        </Link>
 
         <ul className={styles.header__items}>
-          <Link href="/agents" passHref>
-            <li><FormattedMessage id='agents' /></li>
-          </Link>
           <Link href="/">
             <li><FormattedMessage id='home' /></li>
+          </Link>
+          <Link href="/agents" passHref>
+            <li><FormattedMessage id='agents' /></li>
           </Link>
         </ul>
       </nav>

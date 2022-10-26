@@ -1,6 +1,6 @@
 .header__container {
   background-color: var(--secondary);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .header__nav {
@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1140px;
+  margin: auto;
 }
 
 .header__items {
