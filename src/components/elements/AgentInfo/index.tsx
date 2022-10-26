@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Agent } from '@App/core/types/IAgent'
 import { AudioButton } from '../AudioButton'
+import { AgentsAbilities } from './AgentsAbilities'
 import styles from './styles.module.scss'
 
 interface AgentInfoProps {
@@ -13,7 +14,7 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
     <section className={styles.agent__wrapper}>
       <section className={styles.agent__container}>
         <div className={styles.agent__portrait}>
-          <Image width={800} height={900} src={agent.fullPortraitV2} />
+          <Image width={1000} height={1000} src={agent.fullPortrait} />
           <Image
             className={styles.agent__background}
             src={agent.background}
@@ -30,6 +31,12 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
             />
           </div>
 
+          {agent.characterTags?.map((tag) => (
+            <div key={tag}>
+              <p>{tag}</p>
+            </div>
+          ))}
+
           <p className={styles.agent__description}>{agent.description}</p>
 
           <div className={styles['agent__role--title']}>
@@ -38,20 +45,9 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
           </div>
           <p>{agent.role.description}</p>
         </div>
-        {agent.characterTags?.map((tag) => (
-          <div key={tag}>
-            <p>{tag}</p>
-          </div>
-        ))}
       </section>
 
-      {agent.abilities.map((ability) => (
-        <div key={ability.slot}>
-          <p>{ability.displayName}</p>
-          <p>{ability.description}</p>
-          <Image src={ability.displayIcon} width={100} height={100} />
-        </div>
-      ))}
+      <AgentsAbilities abilities={agent.abilities} />
     </section>
   )
 }

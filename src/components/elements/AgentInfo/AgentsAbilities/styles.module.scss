@@ -1,0 +1,31 @@
+.abilities__container {
+  display: flex;
+  margin: 4rem 0rem 2rem;
+}
+
+.abilities__button {
+  background-color: var(--secondary-light);
+  border-radius: 50%;
+  margin-left: 2%;
+  cursor: pointer;
+  padding: 0.8rem;
+  border: 4px solid var(--secondary);
+  transition: ease-in 0.3s;
+
+  & + & {
+    margin-left: -2%;
+  }
+}
+
+.abilities__button:hover {
+  border-color: var(--primary);
+  background-color: var(--secondary);
+}
+
+.abilities__wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
