@@ -1,0 +1,15 @@
+.audio__button {
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: ease-in 0.2s;
+}
+
+.audio__button:hover {
+  background-color: var(--secondary-light);
+}
+
+.audio__button--icon {
+  color: var(--primary);
+}
