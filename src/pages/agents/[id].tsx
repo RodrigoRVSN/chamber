@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticPropsContext } from 'next'
-import Image from 'next/image'
-import { FormattedMessage } from 'react-intl'
+import AgentInfo from '@App/components/elements/AgentInfo'
 import { Agent } from '@App/core/types/IAgent'
 
 interface PathsProps {
@@ -14,22 +13,20 @@ interface IAgents {
   agent: Agent
 }
 
-export default function AgentPage ({ agent }: IAgents) {
-  return (
-    <>
-      <h1>{agent.displayName}</h1>
-      <p>{agent.description}</p>
-      <Image width={200} height={300} src={agent.fullPortrait}/>
-      <FormattedMessage id='cta' />
-    </>
-  )
+export default function AgentPage({ agent }: IAgents) {
+  return <AgentInfo agent={agent} />
 }
 
-export const getStaticPaths: GetStaticPaths = async ({ locales, defaultLocale }) => {
-  const response = await fetch(`https://valorant-api.com/v1/agents/?language=${defaultLocale}`)
+export const getStaticPaths: GetStaticPaths = async ({
+  locales,
+  defaultLocale
+}) => {
+  const response = await fetch(
+    `https://valorant-api.com/v1/agents/?language=${defaultLocale}`
+  )
   const { data } = await response.json()
 
-  const paths = locales?.map(locale => ({
+  const paths = locales?.map((locale) => ({
     params: {
       locale,
       id: data[0].uuid
@@ -42,10 +39,15 @@ export const getStaticPaths: GetStaticPaths = async ({ locales, defaultLocale })
   }
 }
 
-export async function getStaticProps ({ locale, params }: GetStaticPropsContext) {
+export async function getStaticProps({
+  locale,
+  params
+}: GetStaticPropsContext) {
   const localeSuffix = `language=${locale}`
 
-  const response = await fetch(`https://valorant-api.com/v1/agents/${params?.id}/?${localeSuffix}`)
+  const response = await fetch(
+    `https://valorant-api.com/v1/agents/${params?.id}/?${localeSuffix}`
+  )
   const { data } = await response.json()
 
   return { props: { agent: data } }

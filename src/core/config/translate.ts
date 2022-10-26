@@ -8,7 +8,7 @@ export const messages = {
     cta: 'Entrar',
     agents: 'Agentes',
     home: 'Início'
-  }
+  },
 }
 
 export type IMessages = keyof typeof messages

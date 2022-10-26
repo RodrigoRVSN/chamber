@@ -1,0 +1,19 @@
+.audio__button {
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  transition: ease-in 0.2s;
+  display: flex;
+}
+
+.audio__button:not(:disabled) {
+  cursor: pointer;
+}
+
+.audio__button:hover {
+  background-color: var(--secondary-light);
+}
+
+.audio__button--icon {
+  color: var(--primary);
+}

@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-li, a {
+li, a, button {
+  border: 0;
   text-decoration: none;
   list-style: none;
 }

@@ -11,7 +11,7 @@ interface IAgents {
 export default function Agents ({ agents }: IAgents): JSX.Element {
   return (
     <section className={styles.agents__container}>
-      {agents.map(agent => (
+      {agents.map((agent) => (
         <Link key={agent.uuid} passHref href={`/agents/${agent.uuid}`}>
           <a className={styles.agent__wrapper}>
             <Image src={agent.displayIcon} height={100} width={100} />
@@ -33,7 +33,9 @@ export default function Agents ({ agents }: IAgents): JSX.Element {
 export async function getStaticProps (ctx: GetStaticPropsContext) {
   const localeSuffix = `language=${ctx.locale}`
 
-  const response = await fetch(`https://valorant-api.com/v1/agents?${localeSuffix}&isPLayableCharacter=true`)
+  const response = await fetch(
+    `https://valorant-api.com/v1/agents?${localeSuffix}&isPLayableCharacter=true`
+  )
   const { data } = await response.json()
 
   return { props: { agents: data } }

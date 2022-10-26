@@ -1,0 +1,49 @@
+.agent__wrapper {
+  max-width: 1040px;
+  padding: 3rem 1rem;
+  margin: auto;
+}
+
+.agent__container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @media(min-width: 700px) {
+    flex-direction: row;
+  }
+}
+
+.agent__portrait {
+  position: relative;
+}
+
+.agent__background {
+  position: absolute;
+  z-index: -1;
+}
+
+.agent__title {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.agent__description {
+  margin: 2rem 0;
+}
+
+.agent__role--title {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: .8rem;
+  gap: 1rem;
+  background-color: var(--secondary-light);
+}
+
+.agent__role--title span {
+  color: var(--text);
+  font-size: 1.2rem;
+}

@@ -13,10 +13,14 @@ export const Header = () => {
 
         <ul className={styles.header__items}>
           <Link href="/">
-            <li><FormattedMessage id='home' /></li>
+            <li>
+              <FormattedMessage id="home" />
+            </li>
           </Link>
           <Link href="/agents" passHref>
-            <li><FormattedMessage id='agents' /></li>
+            <li>
+              <FormattedMessage id="agents" />
+            </li>
           </Link>
         </ul>
       </nav>

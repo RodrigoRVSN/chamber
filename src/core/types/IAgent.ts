@@ -1,4 +1,3 @@
-
 export interface Ability {
   slot: string
   displayName: string

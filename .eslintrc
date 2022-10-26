@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/eslintrc",
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react","react-hooks","@typescript-eslint", "import"],
+  "plugins": ["react","react-hooks","@typescript-eslint", "import", "prettier"],
   "extends": [
     "plugin:react/recommended",
     "standard",
@@ -14,11 +14,15 @@
     "es6": true
   },
   "rules": {
+    "prettier/prettier": "error",
     "no-shadow": 1,
     "import/no-named-as-default": 0,
     "import/no-named-as-default-member": 0,
     "react/react-in-jsx-scope": 0,
     "no-undef": 0,
+    "indent": 0,
+    "multiline-ternary": 0,
+    "space-before-function-paren": 0,
     "import/order": [
       "error",
       {

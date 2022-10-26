@@ -10,9 +10,12 @@ function MyApp ({ Component, pageProps }: AppProps) {
   const { locale } = useRouter()
 
   return (
-    <IntlProvider locale={locale || 'en-US'} messages={messages[locale as IMessages]}>
-        <Header/>
-       <Component {...pageProps} />
+    <IntlProvider
+      locale={locale || 'en-US'}
+      messages={messages[locale as IMessages]}
+    >
+      <Header />
+      <Component {...pageProps} />
     </IntlProvider>
   )
 }
