@@ -1,0 +1,32 @@
+.header__container {
+  background-color: var(--secondary);
+  padding: 2rem;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+}
+
+.header__items {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__items > li {
+  background-color: var(--secondary);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  transition: all ease-in 0.3s;
+}
+
+.header__items > li:hover {
+  background-color: var(--secondary-light);
+  border-radius: 8px;
+}

@@ -44,6 +44,9 @@
       "typescript": {
         "alwaysTryTypes": true
       }
+    },
+    "react": {
+      "version": "detect"
     }
   },
   "ignorePatterns": ["node_modules/", "build/", "dist/"]

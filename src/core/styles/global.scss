@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+li, a {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --primary: #ff4655;
+  --secondary: #111111;
+  --secondary-light: #4b4949;
+  --text: #F9F9F9;
+}
