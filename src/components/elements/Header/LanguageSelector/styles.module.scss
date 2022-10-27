@@ -24,6 +24,11 @@
   }
 }
 
+.language__disabled {
+  pointer-events: none;
+  color: var(--secondary);
+}
+
 @keyframes fadeIn {
   0% {
     transform: translateY(-20px);

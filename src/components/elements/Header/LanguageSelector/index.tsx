@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
 
 export const LanguageSelector = () => {
   const [isHover, setIsHover] = useState(false)
-  const { pathname } = useRouter()
+  const { asPath, locale } = useRouter()
 
   const handleDisableDropdown = () => {
     setIsHover(false)
@@ -28,8 +28,10 @@ export const LanguageSelector = () => {
       {isHover && (
         <ul>
           {languages.map(({ title, flag }) => (
-            <Link key={flag} passHref href={pathname} locale={flag}>
-              <li>{title}</li>
+            <Link key={flag} passHref href={asPath} locale={flag}>
+              <li className={locale === flag ? styles.language__disabled : '#'}>
+                {title}
+              </li>
             </Link>
           ))}
         </ul>

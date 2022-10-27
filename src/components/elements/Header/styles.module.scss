@@ -1,7 +1,6 @@
 .header__container {
   background-color: var(--secondary);
   padding: 1.5rem;
-  z-index: 1;
 }
 
 .header__nav {
@@ -16,6 +15,7 @@
   align-items: center;
   display: flex;
   gap: 2rem;
+  z-index: 1;
 }
 
 .header__items > li {
