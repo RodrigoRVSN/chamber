@@ -20,7 +20,9 @@ export const AgentsAbilities = ({ abilities }: AgentsAbilitiesProps) => {
         {abilities.map((ability, index) => (
           <button
             key={ability.slot}
-            className={styles.abilities__button}
+            className={`${abilitySelected === index && styles.oi} ${
+              styles.abilities__button
+            } `}
             onClick={() => handleSelectAbility(index)}
           >
             <Image src={ability.displayIcon} width={60} height={60} />

@@ -8,7 +8,7 @@ interface IAgents {
   agents: Agent[]
 }
 
-export default function Agents ({ agents }: IAgents): JSX.Element {
+export default function Agents({ agents }: IAgents): JSX.Element {
   return (
     <section className={styles.agents__container}>
       {agents.map((agent) => (
@@ -30,7 +30,7 @@ export default function Agents ({ agents }: IAgents): JSX.Element {
   )
 }
 
-export async function getStaticProps (ctx: GetStaticPropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const localeSuffix = `language=${ctx.locale}`
 
   const response = await fetch(

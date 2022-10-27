@@ -6,7 +6,7 @@ import { Header } from '@App/components/elements/Header'
 import { IMessages, messages } from '@App/core/config/translate'
 import '@App/core/styles/global.scss'
 
-function MyApp ({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   const { locale } = useRouter()
 
   return (

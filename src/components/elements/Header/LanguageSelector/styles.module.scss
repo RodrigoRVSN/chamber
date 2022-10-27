@@ -1,0 +1,36 @@
+.language__selector_container {
+  position: relative;
+
+  ul {
+    position: absolute;
+    background-color: var(--secondary-light);
+    padding: 1rem 1rem;
+    right: 0;
+    border-radius: 0.5rem;
+    border-bottom: 4px solid var(--primary);
+    animation: fadeIn 0.5s;
+
+    > li {
+      font-size: 14px;
+      white-space: nowrap;
+      margin-bottom: 1rem;
+      transition: ease-in 0.2s;
+      font-weight: 700;
+    }
+
+    > li:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-0);
+    opacity: 1;
+  }
+}

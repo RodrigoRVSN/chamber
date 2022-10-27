@@ -32,9 +32,7 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
           </div>
 
           {agent.characterTags?.map((tag) => (
-            <div key={tag}>
-              <p>{tag}</p>
-            </div>
+            <p key={tag}>{tag}</p>
           ))}
 
           <p className={styles.agent__description}>{agent.description}</p>

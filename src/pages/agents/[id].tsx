@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticPropsContext } from 'next'
+import Head from 'next/head'
 import AgentInfo from '@App/components/elements/AgentInfo'
 import { Agent } from '@App/core/types/IAgent'
 
@@ -14,7 +15,14 @@ interface IAgents {
 }
 
 export default function AgentPage({ agent }: IAgents) {
-  return <AgentInfo agent={agent} />
+  return (
+    <>
+      <Head>
+        <title>{agent.displayName} | Valorant</title>
+      </Head>
+      <AgentInfo agent={agent} />
+    </>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async ({

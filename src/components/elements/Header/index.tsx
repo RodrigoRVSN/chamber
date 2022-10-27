@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FormattedMessage } from 'react-intl'
+import { LanguageSelector } from './LanguageSelector'
 import styles from './styles.module.scss'
 
 export const Header = () => {
@@ -12,6 +13,8 @@ export const Header = () => {
         </Link>
 
         <ul className={styles.header__items}>
+          <LanguageSelector />
+
           <Link href="/">
             <li>
               <FormattedMessage id="home" />
