@@ -11,7 +11,7 @@ interface AgentInfoProps {
 
 const AgentInfo = ({ agent }: AgentInfoProps) => {
   return (
-    <section className={styles.agent__wrapper}>
+    <main className={styles.agent__wrapper}>
       <section className={styles.agent__container}>
         <div className={styles.agent__portrait}>
           <Image width={1000} height={1000} src={agent.fullPortrait} />
@@ -46,7 +46,7 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
       </section>
 
       <AgentsAbilities abilities={agent.abilities} />
-    </section>
+    </main>
   )
 }
 

@@ -2,12 +2,14 @@ export const messages = {
   'en-US': {
     cta: 'Enter',
     agents: 'Agents',
-    home: 'Home'
+    home: 'Home',
+    'see-agents': 'See agents'
   },
   'pt-BR': {
     cta: 'Entrar',
     agents: 'Agentes',
-    home: 'Início'
+    home: 'Início',
+    'see-agents': 'Ver agentes'
   }
 }
 

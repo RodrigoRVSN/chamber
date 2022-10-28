@@ -10,7 +10,7 @@ interface IAgents {
 
 export default function Agents({ agents }: IAgents): JSX.Element {
   return (
-    <section className={styles.agents__container}>
+    <main className={styles.agents__container}>
       {agents.map((agent) => (
         <Link key={agent.uuid} passHref href={`/agents/${agent.uuid}`}>
           <a className={styles.agent__wrapper}>
@@ -26,7 +26,7 @@ export default function Agents({ agents }: IAgents): JSX.Element {
           </a>
         </Link>
       ))}
-    </section>
+    </main>
   )
 }
 
