@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Globe } from 'phosphor-react'
+import { Check, Globe } from 'phosphor-react'
 import { useState } from 'react'
 import { languages } from './LanguageSelector.data'
 import styles from './styles.module.scss'
@@ -27,13 +27,17 @@ export const LanguageSelector = () => {
 
       {isHover && (
         <ul>
-          {languages.map(({ title, flag }) => (
-            <Link key={flag} passHref href={asPath} locale={flag}>
-              <li className={locale === flag ? styles.language__disabled : '#'}>
-                {title}
-              </li>
-            </Link>
-          ))}
+          {languages.map(({ title, flag }) => {
+            const isSelected = locale === flag
+
+            return (
+              <Link key={flag} passHref href={asPath} locale={flag}>
+                <li className={isSelected ? styles.language__disabled : '#'}>
+                  {title} {isSelected && <Check size={20} />}
+                </li>
+              </Link>
+            )
+          })}
         </ul>
       )}
     </li>
