@@ -9,13 +9,13 @@ export const Header = () => {
     <header className={styles.header__container}>
       <nav className={styles.header__nav}>
         <Link href="/" passHref>
-          <Image src="/logo.png" height={40} width={60} />
+          <Image src="/logo.png" height={40} width={60} alt="Logo Valorant" />
         </Link>
 
         <ul className={styles.header__items}>
           <LanguageSelector />
 
-          <Link href="/">
+          <Link href="/" passHref>
             <li>
               <FormattedMessage id="home" />
             </li>

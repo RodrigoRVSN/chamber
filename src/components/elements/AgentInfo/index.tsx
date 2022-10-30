@@ -14,11 +14,17 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
     <main className={styles.agent__wrapper}>
       <section className={styles.agent__container}>
         <div className={styles.agent__portrait}>
-          <Image width={1000} height={1000} src={agent.fullPortrait} />
           <Image
+            alt={agent.displayName}
+            width={500}
+            height={500}
+            src={agent.fullPortrait}
+          />
+          <Image
+            fill
             className={styles.agent__background}
             src={agent.background}
-            layout="fill"
+            alt=""
           />
         </div>
 
@@ -38,7 +44,12 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
           <p className={styles.agent__description}>{agent.description}</p>
 
           <div className={styles['agent__role--title']}>
-            <Image src={agent.role.displayIcon} width={30} height={30} />
+            <Image
+              src={agent.role.displayIcon}
+              width={30}
+              height={30}
+              alt={agent.role.displayName}
+            />
             <span>{agent.role.displayName}</span>
           </div>
           <p>{agent.role.description}</p>

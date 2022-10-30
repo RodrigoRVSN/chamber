@@ -25,7 +25,12 @@ export const AgentsAbilities = ({ abilities }: AgentsAbilitiesProps) => {
             } `}
             onClick={() => handleSelectAbility(index)}
           >
-            <Image src={ability.displayIcon} width={60} height={60} />
+            <Image
+              alt={ability.displayName}
+              src={ability.displayIcon}
+              width={60}
+              height={60}
+            />
           </button>
         ))}
       </div>

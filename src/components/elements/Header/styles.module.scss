@@ -18,7 +18,7 @@
   z-index: 1;
 }
 
-.header__items > li {
+.header__items > li, .header__items > a {
   background-color: var(--secondary);
   color: var(--text);
   cursor: pointer;
@@ -29,7 +29,7 @@
   transition: all ease-in 0.3s;
 }
 
-.header__items > li:hover {
+.header__items > li:hover, .header__items > a:hover {
   background-color: var(--secondary-light);
   border-radius: 8px;
 }

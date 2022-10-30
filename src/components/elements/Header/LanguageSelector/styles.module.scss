@@ -10,7 +10,7 @@
     border-bottom: 4px solid var(--primary);
     animation: fadeIn 0.5s;
 
-    > li {
+    > a, li {
       font-size: 14px;
       white-space: nowrap;
       margin-bottom: 1rem;
@@ -18,9 +18,10 @@
       font-weight: 700;
       display: flex;
       justify-content: space-between;
+      color: var(--text);
     }
 
-    > li:hover {
+    > a,li:hover {
       color: var(--primary);
     }
   }
@@ -28,7 +29,7 @@
 
 .language__disabled {
   pointer-events: none;
-  color: var(--secondary);
+  color: var(--secondary) !important;
 }
 
 @keyframes fadeIn {

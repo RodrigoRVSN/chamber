@@ -24,6 +24,7 @@ export const AudioButton = ({ audioUrl, durationTime }: AudioButtonProps) => {
       className={styles.audio__button}
       disabled={isPlaying}
       onClick={handlePlayAudio}
+      data-testid="audio__button"
     >
       {isPlaying ? (
         <SpeakerHigh className={styles['audio__button--icon']} size={32} />
