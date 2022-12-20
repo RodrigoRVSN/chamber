@@ -47,7 +47,7 @@
     "tsconfig-paths": "^4.0.0",
     "typescript": "latest",
     "vite-tsconfig-paths": "^3.5.2",
-    "vitest": "^0.24.3"
+    "vitest": "^0.26.0"
   },
   "browser": {
     "child_process": false
