@@ -1288,13 +1288,6 @@ builtins@^5.0.1:
   dependencies:
     semver "^7.0.0"
 
-bun-framework-next@^12:
-  version "12.2.5"
-  resolved "https://registry.yarnpkg.com/bun-framework-next/-/bun-framework-next-12.2.5.tgz#e1619c6a727775709b7aa9b8e4527fc7f0830cde"
-  integrity sha512-2sbt+qLxdv6FKIDMwi6dWeTQj6GwF0j0IAKTGk977TIUZMEBqr93Nb2DSIj0FPBF0ZCCO/lGYD3j3ulmmD0GAQ==
-  dependencies:
-    react-is "*"
-
 cachedir@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/cachedir/-/cachedir-2.3.0.tgz#0c75892a052198f0b21c7c1804d8331edfcae0e8"
@@ -3962,11 +3955,6 @@ react-intl@^6.2.1:
     hoist-non-react-statics "^3.3.2"
     intl-messageformat "10.2.1"
     tslib "2.4.0"
-
-react-is@*:
-  version "18.2.0"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
-  integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
