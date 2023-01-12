@@ -11,7 +11,7 @@ describe('<Home />', () => {
 
       cy.url().should('include', 'agents')
 
-      cy.get('[data-testid=agents__role-name--Chamber]').should('contain', 'Sentinel')
+      cy.get('[data-testid=agents__role-name--22697a3d-45bf-8dd7-4fec-84a9e28c69d7]').should('contain', 'Sentinel')
     });
 
     
