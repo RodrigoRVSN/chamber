@@ -20,7 +20,12 @@ export default function Home() {
         />
       </video>
 
-      <Link href="/agents" passHref className={styles.home__cta_button}>
+      <Link
+        href="/agents"
+        passHref
+        className={styles.home__cta_button}
+        data-testid="home__button--see-agens"
+      >
         <FormattedMessage id="see-agents" />
       </Link>
     </main>

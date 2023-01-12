@@ -22,6 +22,7 @@ export const LanguageSelector = () => {
       className={styles.language__selector_container}
       onMouseOver={handleEnableDropdown}
       onMouseLeave={handleDisableDropdown}
+      data-testid="language-selector__dropdown--languages"
     >
       <Globe size={30} />
 
@@ -32,7 +33,10 @@ export const LanguageSelector = () => {
 
             return (
               <Link key={flag} passHref href={asPath} locale={flag}>
-                <li className={isSelected ? styles.language__disabled : '#'}>
+                <li
+                  data-testid={`languages-selector__dropdown-${flag}`}
+                  className={isSelected ? styles.language__disabled : '#'}
+                >
                   {title} {isSelected && <Check size={20} />}
                 </li>
               </Link>

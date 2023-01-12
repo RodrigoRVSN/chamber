@@ -36,7 +36,9 @@ export default function Agents({ agents }: IAgents): JSX.Element {
               />
             </div>
 
-            <span>{agent.role.displayName}</span>
+            <span data-testid={`agents__role-name--${agent.displayName}`}>
+              {agent.role.displayName}
+            </span>
           </div>
         </Link>
       ))}
