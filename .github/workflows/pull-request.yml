@@ -46,7 +46,7 @@ jobs:
           test_command: 'yarn test:cov'
 
       - name: Cypress run
-        uses: cypress-io/github-action@v5.x.x 
+        uses: cypress-io/github-action@v5.0.5 
         with:
           build: npm run build
           start: npm start

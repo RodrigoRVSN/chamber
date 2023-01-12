@@ -41,3 +41,9 @@ jobs:
 
       - name: 👘 Run linter
         run: yarn lint
+        
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.0.5 
+        with:
+          build: npm run build
+          start: npm start
