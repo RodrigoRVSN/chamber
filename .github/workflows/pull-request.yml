@@ -44,3 +44,9 @@ jobs:
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           test_command: 'yarn test:cov'
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.x.x 
+        with:
+          build: npm run build
+          start: npm start
