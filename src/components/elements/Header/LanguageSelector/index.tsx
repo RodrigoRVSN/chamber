@@ -34,8 +34,8 @@ export const LanguageSelector = () => {
             return (
               <Link key={flag} passHref href={asPath} locale={flag}>
                 <li
-                  data-testid={`languages-selector__dropdown-${flag}`}
-                  className={isSelected ? styles.language__disabled : '#'}
+                  data-testid={`languages-selector__dropdown-${flag}-${isSelected}`}
+                  className={isSelected ? styles.language__disabled : ''}
                 >
                   {title} {isSelected && <Check size={20} />}
                 </li>
