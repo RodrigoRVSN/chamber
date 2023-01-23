@@ -24,7 +24,7 @@ export default function Home() {
         href="/agents"
         passHref
         className={styles.home__cta_button}
-        data-testid="home__button--see-agens"
+        data-testid="home__button--see-agents"
       >
         <FormattedMessage id="see-agents" />
       </Link>
