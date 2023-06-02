@@ -11,6 +11,6 @@ export const messages = {
     home: 'Início',
     'see-agents': 'Ver agentes'
   }
-}
+} as const
 
 export type IMessages = keyof typeof messages

@@ -1,6 +1,8 @@
 import { GetStaticPropsContext } from 'next'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslateMessage } from '@App/core/helpers/getMessage'
 import styles from '@App/core/styles/Agents.module.scss'
 import { Agent } from '@App/core/types/IAgent'
 
@@ -9,40 +11,48 @@ interface IAgents {
 }
 
 export default function Agents({ agents }: IAgents): JSX.Element {
+  const title = useTranslateMessage('agents')
+
   return (
-    <main className={styles.agents__container}>
-      {agents.map((agent) => (
-        <Link
-          className={styles.agent__wrapper}
-          key={agent.uuid}
-          passHref
-          href={`/agents/${agent.uuid}`}
-        >
-          <Image
-            alt={agent.displayName}
-            src={agent.displayIcon}
-            height={100}
-            width={100}
-          />
+    <>
+      <Head>
+        <title>{title} | Valorant</title>
+      </Head>
 
-          <div className={styles.agent__info}>
-            <div className={styles.display__name}>
-              <p>{agent.displayName}</p>
-              <Image
-                alt={agent.role.displayName}
-                src={agent.role.displayIcon}
-                height={30}
-                width={30}
-              />
+      <main className={styles.agents__container}>
+        {agents.map((agent) => (
+          <Link
+            className={styles.agent__wrapper}
+            key={agent.uuid}
+            passHref
+            href={`/agents/${agent.uuid}`}
+          >
+            <Image
+              alt={agent.displayName}
+              src={agent.displayIcon}
+              height={100}
+              width={100}
+            />
+
+            <div className={styles.agent__info}>
+              <div className={styles.display__name}>
+                <p>{agent.displayName}</p>
+                <Image
+                  alt={agent.role.displayName}
+                  src={agent.role.displayIcon}
+                  height={30}
+                  width={30}
+                />
+              </div>
+
+              <span data-testid={`agents__role-name--${agent.uuid}`}>
+                {agent.role.displayName}
+              </span>
             </div>
-
-            <span data-testid={`agents__role-name--${agent.uuid}`}>
-              {agent.role.displayName}
-            </span>
-          </div>
-        </Link>
-      ))}
-    </main>
+          </Link>
+        ))}
+      </main>
+    </>
   )
 }
 
