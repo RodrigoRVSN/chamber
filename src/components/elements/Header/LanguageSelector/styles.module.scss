@@ -1,19 +1,24 @@
 .language__selector_container {
   position: relative;
 
+  >svg {
+    vertical-align: middle;
+  }
+
   ul {
     position: absolute;
     background-color: var(--secondary-light);
-    padding: 1rem 1rem;
+    padding: 0.8rem 1rem;
     right: 0;
     border-radius: 0.5rem;
     border-bottom: 4px solid var(--primary);
     animation: fadeIn 0.5s;
 
-    > a, li {
+    >a,
+    li {
       font-size: 14px;
       white-space: nowrap;
-      margin-bottom: 1rem;
+      margin-bottom: 0.3rem;
       transition: ease-in 0.2s;
       font-weight: 700;
       display: flex;
@@ -21,7 +26,8 @@
       color: var(--text);
     }
 
-    > a,li:hover {
+    >a,
+    li:hover {
       color: var(--primary);
     }
   }
@@ -37,6 +43,7 @@
     transform: translateY(-20px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(-0);
     opacity: 1;
