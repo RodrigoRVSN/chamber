@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import { Agent } from '@App/core/types/IAgent'
-import { AudioButton } from '../AudioButton'
 import { AgentsAbilities } from './AgentsAbilities'
 import styles from './styles.module.scss'
+import { AudioButton } from '../AudioButton'
 
 interface AgentInfoProps {
   agent: Agent

@@ -2,7 +2,7 @@ import { GetStaticPropsContext } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslateMessage } from '@App/core/helpers/getMessage'
+import { useTranslateMessage } from '@App/core/helpers/useTranslateMessage'
 import styles from '@App/core/styles/Agents.module.scss'
 import { Agent } from '@App/core/types/IAgent'
 

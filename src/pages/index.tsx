@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { FormattedMessage } from 'react-intl'
-import { useTranslateMessage } from '@core/helpers/getMessage'
+import { useTranslateMessage } from '@core/helpers/useTranslateMessage'
 import styles from '@core/styles/Home.module.scss'
 
 export default function Home() {
