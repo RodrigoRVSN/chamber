@@ -6,9 +6,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          {/* Change favicon. /favicon.png in public default */}
           <link rel="shortcut icon" href="/logo.png" type="image/png" />
-          {/* Change font - Roboto default */}
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
             rel="stylesheet"
