@@ -34,12 +34,12 @@ export const getStaticPaths: GetStaticPaths = async ({
   )
   const { data } = await response.json()
 
-  const paths = locales?.map((locale) => ({
+  const paths: PathsProps[] = (locales || []).map((locale) => ({
     params: {
       locale,
       id: data[0].uuid
     }
-  })) as PathsProps[]
+  }))
 
   return {
     paths,

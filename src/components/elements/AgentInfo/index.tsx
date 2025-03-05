@@ -31,10 +31,12 @@ const AgentInfo = ({ agent }: AgentInfoProps) => {
         <div>
           <div className={styles.agent__title}>
             <h1>{agent.displayName}</h1>
-            <AudioButton
-              audioUrl={agent.voiceLine.mediaList[0].wave}
-              durationTime={agent.voiceLine.maxDuration}
-            />
+            {agent.voiceLine && (
+              <AudioButton
+                audioUrl={agent.voiceLine.mediaList[0].wave}
+                durationTime={agent.voiceLine.maxDuration}
+              />
+            )}
           </div>
 
           {agent.characterTags?.map((tag) => (

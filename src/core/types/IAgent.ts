@@ -46,5 +46,5 @@ export interface Agent {
   isBaseContent: boolean
   role: Role
   abilities: Ability[]
-  voiceLine: VoiceLine
+  voiceLine?: VoiceLine
 }
