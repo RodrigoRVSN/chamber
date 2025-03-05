@@ -24,7 +24,7 @@ jobs:
           node-version: 18.16.0
 
       - name: 🧠 Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: yarn-cache
         with:
           path: '**/node_modules'
@@ -41,9 +41,9 @@ jobs:
 
       - name: 👘 Run linter
         run: yarn lint
-        
+
       - name: 🤖 Cypress run
-        uses: cypress-io/github-action@v5.0.5 
+        uses: cypress-io/github-action@v5.0.5
         with:
           build: npm run build
           start: npm start
